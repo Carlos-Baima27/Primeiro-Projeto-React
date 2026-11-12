@@ -1,0 +1,8 @@
+import "./footer.css";
+export const Footer = () => {
+  return (
+    <footer>
+      <p>&copy; 2026 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+  );
+};
