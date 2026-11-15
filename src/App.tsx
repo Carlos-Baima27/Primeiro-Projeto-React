@@ -1,6 +1,7 @@
 import "./App.css";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
+import { Card } from "./components/card";
 
 function App() {
   let name = "Carlos";
@@ -9,10 +10,9 @@ function App() {
   return (
     <>
       <Header />
-      <h1 className={color}>
-        Meu nome é {name} e tenho {age} anos. tipo assim, {15 + 15} Anos.
-      </h1>
-      <button>Clique aqui</button>
+      <Card title="Primeiro Card" description="Este é o primeiro card" />
+      <Card title="Segundo Card" description="Este é o segundo card" />
+      <Card title="Terceiro Card" description="Este é o terceiro card" />
       <Footer />
     </>
   );
