@@ -8,13 +8,18 @@ function App() {
   let age = 30;
   let color = "verde";
   return (
-    <>
+    <div>
       <Header />
-      <Card title="Primeiro Card" description="Este é o primeiro card" />
-      <Card title="Segundo Card" description="Este é o segundo card" />
-      <Card title="Terceiro Card" description="Este é o terceiro card" />
+      <Card
+        title="Primeiro Card"
+        description="Esta é a descrição do primeiro card."
+      >
+        <p>Ola, {name}!</p>
+        <p>Você tem {age} anos.</p>
+        <p>Sua cor favorita é {color}.</p>
+      </Card>
       <Footer />
-    </>
+    </div>
   );
 }
 
