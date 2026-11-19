@@ -13,6 +13,7 @@ function App() {
       <Card
         title="Primeiro Card"
         description="Esta é a descrição do primeiro card."
+        active={true}
       >
         <p>Ola, {name}!</p>
         <p>Você tem {age} anos.</p>
