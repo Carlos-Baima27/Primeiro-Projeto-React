@@ -1,0 +1,37 @@
+.special-card {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+.special-card__title {
+  margin: 0 0 12px;
+  color: #4b5563;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.special-card__value {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.special-card__comparison {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.special-card__comparison--positive {
+  color: #15803d;
+}
+
+.special-card__comparison--negative {
+  color: #dc2626;
+}
