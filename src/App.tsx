@@ -1,40 +1,60 @@
 import "./App.css";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
-import { Card } from "./components/card";
-import { SpecialCard } from "./components/special-card";
+import { StatsCard } from "./components/stats-card";
 
-function App() {
-  let name = "Carlos";
-  let age = 30;
-  let color = "verde";
+type StatsItem = {
+  title: string;
+  mainValue: number;
+  comparisonPercent: number;
+  isPositive: boolean;
+};
+
+export default function App() {
+  const stats: StatsItem[] = [
+    {
+      title: "Vendas do mês",
+      mainValue: 1250,
+      comparisonPercent: 8,
+      isPositive: true,
+    },
+    {
+      title: "Novos clientes",
+      mainValue: 48,
+      comparisonPercent: 5,
+      isPositive: false,
+    },
+    {
+      title: "Cancelamentos",
+      mainValue: 48,
+      comparisonPercent: 5,
+      isPositive: false,
+    },
+    {
+      title: "Visitantes do site",
+      mainValue: 1250,
+      comparisonPercent: 8,
+      isPositive: true,
+    },
+  ];
+
   return (
     <div>
       <Header />
-      <Card
-        title="Primeiro Card"
-        description="Esta é a descrição do primeiro card."
-        active={true}
-      >
-        <p>Ola, {name}!</p>
-        <p>Você tem {age} anos.</p>
-        <p>Sua cor favorita é {color}.</p>
-      </Card>
-      <SpecialCard
-        title="Vendas do mês"
-        value={1250}
-        percentage={8}
-        isPositive={true}
-      />
-      <SpecialCard
-        title="Novos clientes"
-        value={48}
-        percentage={5}
-        isPositive={false}
-      />
+
+      <div className="cards">
+        {stats.map((item) => (
+          <StatsCard
+            key={item.title}
+            title={item.title}
+            mainValue={item.mainValue}
+            comparisonPercent={item.comparisonPercent}
+            isPositive={item.isPositive}
+          />
+        ))}
+      </div>
+
       <Footer />
     </div>
   );
 }
-
-export default App;
